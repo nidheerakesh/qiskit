@@ -389,8 +389,8 @@ impl TranspileLayout {
         self.output_permutation = output_permutation;
     }
 
-    /// Add an extra "undoing" permutation that comes inbetween the [DAGCircuit] and any permutation
-    /// already stored in this layout.
+    /// Add an extra "undoing" permutation that comes in between the [DAGCircuit] and any
+    /// permutation already stored in this layout.
     ///
     /// This is typically what transpiler passes should call if they are mutating a
     /// [TranspileLayout] they received, to add new information; if you mutate a [DAGCircuit]
@@ -423,7 +423,7 @@ impl TranspileLayout {
     }
 
     /// Add an extra "undoing" permutation that applied to the virtual qubits of the input circuit
-    /// before the the rest of this layout was split out from the DAG.
+    /// before the rest of this layout was split out from the DAG.
     ///
     /// Say a pass like `ElidePermutations` had run, and so the current state of the transpiler IR
     /// was

@@ -45,7 +45,7 @@ Here's a quick example of what that looks like:
    }
    uint32_t foo_num_qubits(const void *gate) {
       struct foo_gate *self = (struct foo_gate *)gate;
-      // Used stored attirbute as return value.
+      // Use stored attribute as return value.
       return self->num_qubits;
    }
    // Use same logic below for required methods that have

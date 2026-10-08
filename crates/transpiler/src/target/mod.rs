@@ -1519,7 +1519,7 @@ impl Target {
 
     // IndexMap methods
 
-    /// Retreive all the gate names in the Target
+    /// Retrieve all the gate names in the Target
     pub fn keys(&self) -> impl ExactSizeIterator<Item = &str> {
         self.gate_map.keys().map(|x| x.as_str())
     }

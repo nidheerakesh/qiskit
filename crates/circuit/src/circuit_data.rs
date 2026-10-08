@@ -69,7 +69,7 @@ import_exception!(qiskit.circuit.exceptions, CircuitError);
 /// enumerate all the error types that are returned by these functions and
 /// make it clear that the return type is part of the interface.
 ///
-/// In the the future it is expected this single enum will be replaced by per
+/// In the future it is expected this single enum will be replaced by per
 /// method error types to make it even more obvious, but this is a step
 /// towards that as we migrate from Python -> Rust.
 #[non_exhaustive]
@@ -137,7 +137,7 @@ impl From<CircuitDataError> for PyErr {
             CircuitDataError::ParameterTableError(e) => e.into(),
             CircuitDataError::RegisterNameExists(e) => e.into(),
             CircuitDataError::BitExceedsCapacity(bit_type, bit_index) => CircuitError::new_err(
-                format!("{bit_type} at index {bit_index} exceds circuit capacity."),
+                format!("{bit_type} at index {bit_index} exceeds circuit capacity."),
             ),
             CircuitDataError::VarStretchContainerError(e) => CircuitError::new_err(e.to_string()),
             CircuitDataError::ParameterSliceLenMismatch => PyValueError::new_err(

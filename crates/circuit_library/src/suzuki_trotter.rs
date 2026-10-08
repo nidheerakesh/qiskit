@@ -126,7 +126,7 @@ pub enum EvolutionError {
     CircuitBuild,
 
     /// A general error for terms reordering error
-    #[error["Error ocurred when trying to reorder terms: {0}"]]
+    #[error["Error occurred when trying to reorder terms: {0}"]]
     TermsReorder(String),
 }
 

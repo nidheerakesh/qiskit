@@ -255,7 +255,7 @@ fn try_sparse_observable_generator_for_pauli_based(
     }
 }
 
-/// Attemp to extract generator of a standard gate in the form of a sparse observable.
+/// Attempt to extract generator of a standard gate in the form of a sparse observable.
 fn try_sparse_observable_generator_for_standard_gate(
     operation: &OperationRef,
     params: &[Param],

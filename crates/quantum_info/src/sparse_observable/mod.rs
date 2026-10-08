@@ -837,7 +837,7 @@ impl SparseObservable {
         let mut term_state = compose::Iter::new(self.num_qubits);
 
         // This choice of loop ordering is because we already know that `self`'s `indices` are
-        // sorted, but there's no reason that that the output of `qubit_fn` should maintain order,
+        // sorted, but there's no reason that the output of `qubit_fn` should maintain order,
         // and this way round, we sort as few times as possible.
         for left in other.iter() {
             mapped_term.clear();
@@ -2811,7 +2811,7 @@ impl PySparseObservable {
         Ok(inner.num_terms())
     }
 
-    /// The coefficients of each abstract term in in the sum.  This has as many elements as terms in
+    /// The coefficients of each abstract term in the sum.  This has as many elements as terms in
     /// the sum.
     #[getter]
     fn get_coeffs(slf_: &Bound<Self>) -> ArrayView {

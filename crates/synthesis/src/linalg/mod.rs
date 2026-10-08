@@ -92,7 +92,7 @@ pub fn faer_to_ndarray<T>(mat: MatRef<'_, T>) -> ArrayView2<'_, T> {
     // description from faer and can be assumed to be valid since the constraints on
     // `ArrayView2::from_shape_ptr()`
     // (https://docs.rs/ndarray/latest/ndarray/type.ArrayView.html#method.from_shape_ptr)
-    // should be be met for a faer Mat.
+    // should be met for a faer Mat.
     unsafe { ArrayView2::from_shape_ptr((nrows, ncols).strides((row_stride, col_stride)), ptr) }
 }
 
@@ -107,7 +107,7 @@ pub(crate) fn nalgebra_to_faer<R: Dim, C: Dim, RStride: Dim, CStride: Dim, T: na
     // description from nalgebra and can be assumed to be valid since the constraints on
     // `ArrayView2::from_shape_ptr()`
     // (https://docs.rs/ndarray/latest/ndarray/type.ArrayView.html#method.from_shape_ptr)
-    // should be be met for a valid nalgebra matrix.
+    // should be met for a valid nalgebra matrix.
     let array = unsafe { ArrayView2::from_shape_ptr(dim.strides(strides), mat.get_unchecked(0)) };
     ndarray_to_faer(array)
 }

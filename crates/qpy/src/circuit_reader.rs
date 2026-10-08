@@ -1466,7 +1466,7 @@ pub(crate) fn unpack_circuit(
     Ok(qpy_data.circuit_data)
 }
 
-// handling for non control flow gates with conditionals, for backwards compatability
+// handling for non control flow gates with conditionals, for backwards compatibility
 pub fn wrap_conditional_gate(
     instruction: &formats::CircuitInstructionV2Pack,
     op: PackedOperation,

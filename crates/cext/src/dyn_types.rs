@@ -47,7 +47,7 @@ pub unsafe trait DynTraitExposer<Trait: ?Sized>: Send + Sync + 'static {
     fn object_dyn_type_id(&self) -> DynTypeId<'_>;
     /// Leak the raw data pointer of `ob` to a type-erased C pointer.
     ///
-    /// *Warning*: when implementating this method, make sure that you do not trigger a virtual
+    /// *Warning*: when implementing this method, make sure that you do not trigger a virtual
     /// destructor after transferring ownership of the data pointer.  See the trait's "Safety"
     /// section.
     ///
@@ -143,7 +143,7 @@ pub use make_static_trait_exposer;
 /// dynamically at runtime of your C program.  The valid values of `slot`, `flag` and the
 /// function-pointer type of `ptr` will vary based on the context you are passing it to.
 ///
-/// Typically, you will defining program statics of tables of these, terminating in the sentinel
+/// Typically, you will define program statics of tables of these, terminating in the sentinel
 /// value `{-1, 0, NULL}`.  Various Qiskit C API functions will take arguments of this form, and
 /// return a "vtable" handle back, which can then be used to define "instances" of the object with
 /// this attached behavior.

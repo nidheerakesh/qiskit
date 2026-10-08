@@ -357,7 +357,7 @@ pub enum ParamRegisterPack {
     Clbit { index: u32 },
 }
 
-// most of the data here is "virtual" in the sense that is is not stored as-is
+// most of the data here is "virtual" in the sense that it is not stored as-is
 // we use custom reader/writer to enable spreading the data to its relevant places in the qpy instruction
 // in newer versions of qpy it may be better to store all the data consecutively
 #[derive(Debug)]
@@ -1284,7 +1284,7 @@ pub struct ScheduleBlockPack {
     #[br(count = num_elements, args { inner: (version,) })]
     pub elements: Vec<ScheduleBlockElementPack>,
     #[br(if(version >= 7))]
-    // originially a reference is either null or ScheduleBlockPack
+    // originally a reference is either null or ScheduleBlockPack
     pub references: Option<MappingPack>,
 }
 

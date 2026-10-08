@@ -372,7 +372,7 @@ fn matrixview4_to_faer<T: nalgebra::Scalar + Copy>(mat: MatrixView4<T>) -> MatRe
     // SAFETY: We know the array is a 2d array from nalgebra and we get the pointer and memory layout
     // description from nalgebra and can be assumed to be valid since the constraints on
     // `MatRef::From_raw_parts()`
-    // should be be met for a valid nalgebra matrix.
+    // should be met for a valid nalgebra matrix.
     unsafe {
         faer::MatRef::from_raw_parts(
             ptr,

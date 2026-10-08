@@ -1032,7 +1032,7 @@ for the full 128 bit width. ``n`` is used to represent a ``None`` and typically 
 as it indicates an argument that's not used. For ``p`` the data is the UUID for the
 :class:`.Parameter` which can be looked up in the symbol map described in the
 ``map_elements`` outer :ref:`qpy_param_expr_v3` payload. If the type value is
-``s`` this marks the start of a a new recursive section for a nested
+``s`` this marks the start of a new recursive section for a nested
 :class:`.ParameterExpression`. For example, in the following snippet there is an inner ``expr``
 contained in ``final_expr``, constituting a nested expression::
 

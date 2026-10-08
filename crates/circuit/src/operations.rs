@@ -2560,7 +2560,7 @@ mod test_custom_operations {
             panic!("Gate should be a custom gate of type CustomH");
         };
 
-        // Check that the retreived gate is still valid.
+        // Check that the retrieved gate is still valid.
         assert_eq!(gate_as_h.num_qubits(), 1);
         assert!(gate_as_h.is_unitary());
         assert!(matches!(

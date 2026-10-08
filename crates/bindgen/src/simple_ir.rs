@@ -52,7 +52,7 @@ pub struct EnumVariant {
 pub struct Enum {
     /// The export name of the enum.
     pub name: String,
-    /// The primitive-integer representaiton of the enum.
+    /// The primitive-integer representation of the enum.
     pub repr: ir::ReprType,
     /// Tuples of `(name, literal)` for each of the variants.
     pub variants: Vec<EnumVariant>,

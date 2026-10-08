@@ -167,7 +167,7 @@ fn count_active_pairs(
 
 /// Computes the score of applying a Clifford circuit represented by `chunk_idx` on a pair of
 /// qubits, where `pair_counts` represent the numbers of different types of 2-qubit Paulis
-/// (obtained by restricting the active Pauli roations to this pair of qubits).
+/// (obtained by restricting the active Pauli rotations to this pair of qubits).
 fn compute_score(pair_counts: &[u32; 16], chunk_idx: usize) -> Score {
     let deltas = &SUPPORT_DELTA[chunk_idx];
     let mut total_decrease: isize = 0;

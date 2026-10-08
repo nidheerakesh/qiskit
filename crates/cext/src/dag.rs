@@ -2005,12 +2005,12 @@ pub unsafe extern "C" fn qk_dag_apply_custom_operation(
 
     let circ = unsafe { mut_ptr_as_ref(dag) };
 
-    // SAFETY: The pointer is either null or non-null and alligned.
+    // SAFETY: The pointer is either null or non-null and aligned.
     let qargs: &[Qubit] = unsafe { cast_to_bit_slice(qubits, op.num_qubits() as usize) };
-    // SAFETY: The pointer is either null or non-null and alligned.
+    // SAFETY: The pointer is either null or non-null and aligned.
     let cargs: &[Clbit] = unsafe { cast_to_bit_slice(clbits, op.num_clbits() as usize) };
 
-    // SAFETY: The pointer is either null or non-null and alligned.
+    // SAFETY: The pointer is either null or non-null and aligned.
     let params = unsafe { ptr_to_params_owned(params, op.num_params() as usize) };
 
     let ret = if front {

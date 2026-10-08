@@ -10,7 +10,7 @@
 // copyright notice, and modified files need to carry a notice indicating
 // that they have been altered from the originals.
 
-//! A [`Tensor`] and its staticly introspectable data-less counterpart, a [`TensorType`].
+//! A [`Tensor`] and its statically introspectable data-less counterpart, a [`TensorType`].
 //!
 //! A value is a dense array over one of a fixed set of [`DType`]s. Its type pairs a dtype with a
 //! shape whose axes are each either a fixed size or a size bounded above ([`Dim`]).

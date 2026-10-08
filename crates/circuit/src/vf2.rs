@@ -137,7 +137,7 @@ pub mod alias {
         }
     }
 
-    /// The operations that a graph must implement to be be
+    /// The operations that a graph must implement to be
     pub trait Vf2Graph<'a>:
         GraphProp<NodeId: IndexType> + DataMap + EdgeCount + NodeCompactIndexable + Vf2GraphRef<'a>
     {

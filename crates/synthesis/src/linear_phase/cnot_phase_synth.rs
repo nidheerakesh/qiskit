@@ -196,7 +196,7 @@ pub fn synth_cnot_phase_aam(
                 for (parity, _) in s.iter().skip(1) {
                     common.intersect_with(parity);
                     if common.is_clear() {
-                        break; // no bit set, so furthur ANDs will only be 0.
+                        break; // no bit set, so further ANDs will only be 0.
                     }
                 }
 

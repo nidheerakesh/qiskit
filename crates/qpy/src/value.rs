@@ -664,7 +664,7 @@ impl<T: FromGenericValue> FromGenericValue for Vec<T> {
 /// * `type_key` - The type of the data
 /// * `bytes` - The raw data as a u8 array
 /// * `qpy_data` - QPY reader metadata
-/// * `endian` - The endianess of the data used only for reading
+/// * `endian` - The endianness of the data used only for reading
 ///   `ValueType::Integer` and `ValueType::Float` primitive types
 ///   (this applies recursively for `ValueType::Tuple` too). All other
 ///   data is big endian per the QPY format documentation. The use of

@@ -103,7 +103,7 @@ pub enum PauliListError {
 }
 
 /// Specifies the order in which Pauli labels are interpreted.
-/// The standard Qiskit convention inteprets labels right-to-left:
+/// The standard Qiskit convention interprets labels right-to-left:
 /// for Pauli label "IXYZ", the label on the first qubit is "Z". However,
 /// in some cases it is more convenient to interpret labels left-to-right.
 #[derive(PartialEq)]
@@ -489,7 +489,7 @@ impl PauliList {
         indices: &[u32],
         multiple: usize,
     ) {
-        // Ignore I terms from a sparse Pauli list and indicate their corresponsing indices
+        // Ignore I terms from a sparse Pauli list and indicate their corresponding indices
         // For example, if the input Pauli is "XIYZ" (read left-to-right) on qubits [1, 2, 4, 7]
         // then the output is "XYZ" on qubits [1, 4, 7]
         let active_indices: Vec<usize> = pauli_z
@@ -994,7 +994,7 @@ impl Clifford {
         in_x: &[bool],
         indices_in: &[u32],
     ) -> (bool, Vec<bool>, Vec<bool>, Vec<u32>) {
-        // Ignore I terms from a sparse Pauli list and indicate their corresponsing indices
+        // Ignore I terms from a sparse Pauli list and indicate their corresponding indices
         // For example, if the input Pauli is "XIYZ" (read left-to-right) on qubits [1, 2, 4, 7]
         // then the output is "XYZ" on qubits [1, 4, 7]
         let active_indices: Vec<usize> = in_z

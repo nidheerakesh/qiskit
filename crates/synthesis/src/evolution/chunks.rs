@@ -41,7 +41,7 @@ use qiskit_circuit::operations::StandardGate;
 pub(crate) static PAULI_SUPPORT_SIZES: [usize; 16] =
     [0, 1, 1, 1, 1, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2];
 
-// A "chunk" is a small 2-qubit Clifford circuit constisting of some
+// A "chunk" is a small 2-qubit Clifford circuit consisting of some
 // single-qubit Clifford gates followed either by CX(0, 1) or CX(1, 0).
 // There are 18 chunks of interest, numbered 0..18, see reference [1]
 // above.

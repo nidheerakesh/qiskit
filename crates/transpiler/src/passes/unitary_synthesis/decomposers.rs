@@ -379,9 +379,9 @@ impl Decomposer2qCacheInner {
 ///    (relative to the `qargs` order) separately to the decomposer itself, since we can do cheap
 ///    matrix tricks to swap the qubit order of a 2q matrix.
 ///
-/// Taken together, this means that that default settings of `UnitarySynthesis` with a homogeneous
+/// Taken together, this means that the default settings of `UnitarySynthesis` with a homogeneous
 /// [Target] will construct the exact same number of decomposers as the corresponding
-/// loose-constraints form (which is explicitly homogenous) would.
+/// loose-constraints form (which is explicitly homogeneous) would.
 #[derive(Clone, Debug, Default)]
 pub struct DecomposerCache {
     /// Mapping from physical qubits to its allowed Euler basis decomposers.
@@ -764,7 +764,7 @@ fn get_xx_decomposers(
     // decomposer matrix-free.  The Python version UnitarySynthesis using XXDecomposer already
     // implicit assumes (via lookups into the `XXEmbodiments` static dictionary) that the only valid
     // embodiments are formed of standard gates.  In that case, we can simply match the
-    // `StandardGate` into a a known strength (or function of strength).
+    // `StandardGate` into a known strength (or function of strength).
     let embodiments_lookup = imports::XX_EMBODIMENTS.get_bound(py).cast::<PyDict>()?;
     let xx_decomposer_class = imports::XX_DECOMPOSER.get_bound(py);
     let approximation = config.approximation;

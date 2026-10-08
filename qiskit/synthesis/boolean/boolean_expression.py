@@ -86,9 +86,7 @@ class BooleanExpression:
         """
         Args:
             expression (str): The logical expression string.
-            name (str): Optional. Instruction gate name. Otherwise part of the expression is
-               going to be used.
-            var_order(list): A list with the order in which variables will be created.
+            var_order (list): A list with the order in which variables will be created.
                (default: by appearance)
         """
         self.expression = expression

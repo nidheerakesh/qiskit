@@ -126,7 +126,7 @@ impl VirtualQubit {
 
 /// An unsigned integer Vector based layout class
 ///
-/// This class tracks the layout (or mapping between virtual qubits in the the
+/// This class tracks the layout (or mapping between virtual qubits in the
 /// circuit and physical qubits on the physical device) efficiently
 ///
 /// Args:

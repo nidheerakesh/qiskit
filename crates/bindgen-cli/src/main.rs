@@ -62,7 +62,7 @@ enum Command {
     CheckAbi {
         /// An filepath to an export of a previous Qiskit version's slots.
         old: PathBuf,
-        /// If givne, a filepath to an export of a newer Qiskit version's slots.  If not given,
+        /// If given, a filepath to an export of a newer Qiskit version's slots.  If not given,
         /// compare against the current vtable definitions.
         new: Option<PathBuf>,
     },

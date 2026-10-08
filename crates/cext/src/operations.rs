@@ -71,7 +71,7 @@ const _: () = unsafe { expose_by_box!(BoxedCustomOperation) };
 /// }
 /// uint32_t foo_num_qubits(const void *gate) {
 ///     struct foo_gate *self = (struct foo_gate *)gate;
-///     // Used stored attirbute as return value.
+///     // Use stored attribute as return value.
 ///     return self->num_qubits;
 /// }
 /// // Use same logic below for required methods that have
@@ -118,7 +118,7 @@ const _: () = unsafe { expose_by_box!(BoxedCustomOperation) };
 ///
 /// This struct contains raw pointers, which are not [`Send`] or [`Sync`].
 ///
-/// It falls on the responsability of the implementors to ensure that the
+/// It falls on the responsibility of the implementors to ensure that the
 /// data enclosed in the operation can:
 /// - Be accessed safely by multiple threads concurrently.
 /// - Be immutably borrowed by other threads without causing race conditions.
@@ -507,7 +507,7 @@ pub enum CustomOpSlot {
 /// // Implement all required methods
 /// uint32_t foo_num_qubits(const void *gate) {
 ///     struct foo_gate *self = (struct foo_gate *)gate;
-///     // Used stored attirbute as return value.
+///     // Use stored attribute as return value.
 ///     return self->num_qubits;
 /// }
 ///

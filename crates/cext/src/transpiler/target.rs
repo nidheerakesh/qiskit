@@ -1209,7 +1209,7 @@ pub unsafe extern "C" fn qk_target_op_qargs_index(
 /// @param target A pointer to the ``QkTarget``.
 /// @param op_idx The index at which the gate is stored.
 /// @param qarg_idx The index at which the qargs are stored.
-/// @param qargs_out An out pointer to an array qubits. If ``op_idx`` refers to a a global
+/// @param qargs_out An out pointer to an array of qubits. If ``op_idx`` refers to a global
 ///     operation, a null pointer will be written.  The written pointer is borrowed from the
 ///     target and must not be freed.  A zero-qargs instruction will write out a non-null pointer,
 ///     though one that is invalid for reads.

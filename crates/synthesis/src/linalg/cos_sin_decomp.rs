@@ -48,7 +48,7 @@ pub struct CosSinDecompReturn {
 /// ```
 ///
 /// - `l0`, `l1`, `r0`, and `r1` are unitaries of equal size,
-/// - `theta` is the array of angles, with each angle in in the interval :math:`[0, \pi/2]`.
+/// - `theta` is the array of angles, with each angle in the interval :math:`[0, \pi/2]`.
 ///
 /// The diagonal matrices `c` and `s` contain the cosines and sines of angles in `theta`,
 /// respectively. In particular, `c^2 + s^2 = I`.

@@ -1092,7 +1092,7 @@ pub unsafe extern "C" fn qk_param_as_int(param: *const Param, value: *mut i64) -
     // SAFETY: Per documentation, the pointer is non-null and aligned.
     let param = unsafe { const_ptr_as_ref(param) };
 
-    // SAFETY: Per documentation, the pointer is non-null, alligned and valid to hold an ``int64_t``.
+    // SAFETY: Per documentation, the pointer is non-null, aligned and valid to hold an ``int64_t``.
     param_try_int(param)
         .inspect(|param| unsafe { value.write(*param) })
         .is_some()
